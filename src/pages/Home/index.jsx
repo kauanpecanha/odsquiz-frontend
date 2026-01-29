@@ -6,6 +6,8 @@ import SliderLogo from "../../components/SliderLogo/SliderLogo";
 import objectives from '../../assets/odsImage.png'
 import sdgCircle from '../../assets/sdgCircle.png'
 
+import odsquiztextonly from '../../assets/odsquiz-textonly-bg.png'
+
 const Home = () => {
     return(
         <div className="Home">
@@ -16,7 +18,7 @@ const Home = () => {
             
             <div className="home-row">
                 <div className="home-column img-column">
-                    <img  className='logo-center-rotating' src="https://cdn.discordapp.com/attachments/1037486089801306113/1037500528248246332/odsquizlogotext.png" alt="" />
+                    <img  className='logo-center-rotating' src={odsquiztextonly} alt="" />
                     <img src={sdgCircle} className='rotating' alt="" />
                 </div>
                 <div className="home-column text-column">

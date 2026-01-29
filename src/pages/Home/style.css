@@ -1,204 +1,199 @@
-.Home{
-    background-color: #fff;
+.Home {
+  background-color: #fff;
 }
 
-
-
-.Home .Banner{
-    margin-top: 20px;
-    background-image: url('../../assets/bannerODS.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Home .Banner {
+  margin-top: 20px;
+  background-image: url("../../assets/bannerODS.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.Home .Banner a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin:40px;
-    width: 20%;
-    height: 15%;
-    border-radius: 20px;
-    font-size: 1em;
-    border: 0;
-    font-size: 30px;
-    background-color: #D43273;
-    font-weight: 500;
-    text-decoration: none;
-    color: #fff;
+.Home .Banner a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+  width: 20%;
+  height: 15%;
+  border-radius: 20px;
+  border: 0;
+  font-size: 30px;
+  background-color: #d43273;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
 }
 
-.Home .Banner a:hover{
-   background-color: #fff;
-   color: #000;
-   transition: 0.7s;
+.Home .Banner a:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.7s;
 }
 
-.Home .Banner img{
-   height: 50%;
-   
+.Home .Banner img {
+  height: 50%;
 }
 
-.Home .Content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 20px;
+.Home .Content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
-.Content a{
+.Content a {
   margin-bottom: 5%;
   display: flex;
   align-items: center;
 }
 
-.Content img{
+.Content img {
   height: 1.2rem;
   margin-right: 0.3rem;
 }
 
-.Home .OdsContent{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #fff;
-    width: 40%;
-    margin-bottom: 3%;
-    text-align: center;
-
-    color: black;
-    font-family: 'sfproregular';
+.Home .OdsContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  width: 40%;
+  margin-bottom: 3%;
+  text-align: center;
+  color: black;
+  font-family: "sfproregular";
 }
 
-.Home .OdsContent img{
-    width: 20%;
+.Home .OdsContent img {
+  width: 20%;
 }
 
-.Home .OdsContent h1{
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-    border-bottom: 6px solid #00336a;
-    font-family: 'sfprobold';
+.Home .OdsContent h1 {
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  border-bottom: 6px solid #00336a;
+  font-family: "sfprobold";
 }
 
 .OdsAll {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    margin: 5%;
-    margin-bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  margin: 5%;
+  margin-bottom: 0;
 }
 
-.Home .Content a{
-    text-align: center;
-    border-radius: 20px;
-    font-size: 1rem;
-    padding: 20px 30px;
-    background-color: #fff;
-    font-weight: 500;
-    text-decoration: none;
-    font-family: 'sfpromedium';
-    color: #000;
+.Home .Content a {
+  text-align: center;
+  border-radius: 20px;
+  font-size: 1rem;
+  padding: 20px 30px;
+  background-color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: "sfpromedium";
+  color: #000;
 }
 
-.logo-center-rotating{
+.Home .home-row {
+  width: 95vw;
+  height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "sfproregular";
+  margin-top: 3%;
+  flex-wrap: wrap;
+}
+
+.Home .home-row h2 {
+  font-family: "sfprobold";
+}
+
+.Home .text-column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 45vw;
+  height: 50vh;
+}
+
+.Home .img-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+  height: 50vh;
+  position: relative;
+}
+
+.logo-center-rotating {
+  height: 50vh;
   position: absolute;
+  object-fit: contain;
   z-index: 10;
 }
 
+.rotating {
+  height: 50vh;
+  position: absolute;
+  object-fit: contain;
+  z-index: 1;
+  animation: rotating 12s linear infinite;
+  -webkit-animation: rotating 12s linear infinite;
+  -moz-animation: rotating 12s linear infinite;
+  -ms-animation: rotating 12s linear infinite;
+  -o-animation: rotating 12s linear infinite;
+}
 
- .Home .home-row{
-    width: 95vw;
-    height: 50vh;
-    display: flex;
-    justify-content: space-evenly;
-    font-family: 'sfproregular';
-    margin-top: 3%;
-    flex-wrap: wrap;
+.Home .home-button {
+  text-decoration: none;
+  color: black;
+  width: 10em;
+  height: 3em;
+  border: 0.11rem solid black;
+  background-color: #fff;
+  border-radius: 1rem;
+  font-family: "sfprobold";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
- }
-
- .Home .home-row h2{
-    font-family: 'sfprobold';
- }
-
- .Home .img-column img{
-    height: 50vh;
-  
-
-    
- }
-
-
-
- .Home .text-column{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 45vw;
-    height: 50vh;
- }
-
- .Home .img-column{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    width: 45vw;
-    height: 50vh;
- }
-
- .Home .home-button{
-    text-decoration: none;
-    color: black;
-    width: 10em;
-    height: 3em;
-    border: 0.11rem solid black;
-    background-color: #fff;
-    border-radius: 1rem;
-    font-family: 'sfprobold';
-    display: flex;
-    align-items: center;
-    justify-content: center;
- }
-
- @media screen and (max-width: 490px){
-  .Home .home-row{
+@media screen and (max-width: 490px) {
+  .Home .home-row {
     width: 100vw;
     height: auto;
     display: flex;
     flex-direction: column;
-
     align-items: center;
-    font-family: 'sfproregular';
+    font-family: "sfproregular";
     flex-wrap: wrap;
-
-
- }
-  .OdsAll{
-      display: flex;
-      flex-direction: column;
-      
+  }
+  .OdsAll {
+    display: flex;
+    flex-direction: column;
   }
 
   .OdsContent p {
     text-align: justify;
     width: 80vw;
   }
-  .Home .img-column{
+  .Home .img-column {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 90vw;
     margin-top: -3rem;
- }
-  .Home .text-column{
+  }
+  .Home .text-column {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -206,93 +201,84 @@
     height: auto;
     margin-bottom: 5rem;
   }
-  .Home .img-column img{
+  .rotating {
     height: 70vw;
-    
- }
- }
+  }
+  .logo-center-rotating {
+    height: 35vw;
+  }
+}
 
- @media screen and (max-width: 900px){
-
+@media screen and (max-width: 900px) {
   .OdsAll {
     display: flex;
     flex-direction: column;
   }
 
-  .OdsContent p{
+  .OdsContent p {
     width: 70vw;
     text-align: justify;
   }
 
-  .Home .home-row{
+  .Home .home-row {
     display: flex;
     flex-direction: column;
     width: 100vw;
     height: auto;
     justify-content: center;
     align-items: center;
-  
   }
 
-  .Home .img-column{
+  .Home .img-column {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     margin-top: -3rem;
- }
-
- .Home .text-column{
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  width: 90vw;
-  height: auto;
-  margin-bottom: 5rem;
-}
-
-.Home .img-column img{
-  height: 70vw;
-  
-}
-
- }
-
-
-
- @-webkit-keyframes rotating /* Safari and Chrome */ {
-    from {
-      -webkit-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
   }
-  @keyframes rotating {
-    from {
-      -ms-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -webkit-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    to {
-      -ms-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
+
+  .Home .text-column {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 90vw;
+    height: auto;
+    margin-bottom: 5rem;
   }
+
   .rotating {
-    -webkit-animation: rotating 12s linear infinite;
-    -moz-animation: rotating 12s linear infinite;
-    -ms-animation: rotating 12s linear infinite;
-    -o-animation: rotating 12s linear infinite;
-    animation: rotating 12s linear infinite;
-    z-index: 1;
+    height: 70vw;
   }
+  .logo-center-rotating {
+    height: 35vw;
+  }
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
