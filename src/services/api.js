@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: 'https://hack2030-backend.onrender.com/'
-    // baseURL: 'http://localhost:5000'
+    // baseURL: 'https://hack2030-backend.onrender.com/'
+    baseURL: 'http://localhost:5000'
 })
 
 export const getUsers = async () => {
