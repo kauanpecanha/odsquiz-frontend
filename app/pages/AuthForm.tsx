@@ -38,17 +38,6 @@ type ApiErrorResult = {
   message: string;
 };
 
-function getApiBaseUrl() {
-  const apiUrl =
-    process.env.NEXT_PUBLIC_AUTH_API_URL ?? process.env.NEXT_PUBLIC_API_URL;
-
-  if (!apiUrl) {
-    return undefined;
-  }
-
-  return apiUrl.replace(/\/$/, "");
-}
-
 const duplicateEmailMessage = "A user already exists with that email.";
 const invalidCredentialsMessage = "Invalid email or password.";
 
@@ -249,20 +238,12 @@ export function AuthForm({ mode }: AuthFormProps) {
     setFieldErrors({});
     setStatus("submitting");
 
-    const apiBaseUrl = getApiBaseUrl();
-
-    if (!apiBaseUrl) {
-      setStatus("idle");
-      setMessage("The authentication service is not configured.");
-      return;
-    }
-
     const body = isSignup
       ? { name, email, password, address }
       : { email, password };
 
     try {
-      const response = await fetch(`${apiBaseUrl}${endpoint}`, {
+      const response = await fetch(`/api/auth${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
