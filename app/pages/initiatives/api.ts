@@ -13,8 +13,6 @@ type BrasilApiCepResponse = {
 
 type NominatimSearchResult = { lat?: string; lon?: string };
 
-const missingApiMessage = "O serviço de iniciativas não está configurado.";
-
 export function getStoredAuthToken() {
   return window.localStorage.getItem("odsquiz-auth-token");
 }
@@ -30,7 +28,7 @@ export function subscribeToAuthToken(onStoreChange: () => void) {
 
 export async function fetchInitiatives(token: string) {
   const payload = await request(
-    `${getInitiativesApiBaseUrl()}/getAllOnes`,
+    "/api/initiatives",
     { headers: authHeader(token) },
     "Não foi possível carregar as iniciativas.",
   );
@@ -44,7 +42,7 @@ export async function createInitiative(
   token: string,
 ) {
   await request(
-    `${getInitiativesApiBaseUrl()}/createOne`,
+    "/api/initiatives",
     {
       method: "POST",
       headers: { ...authHeader(token), "Content-Type": "application/json" },
@@ -142,16 +140,6 @@ function apiMessage(payload: unknown, fallback: string) {
     : isRecord(payload) && typeof payload.error === "string"
       ? payload.error
       : fallback;
-}
-
-function getInitiativesApiBaseUrl() {
-  const url = process.env.NEXT_PUBLIC_INITIATIVES_API_URL?.replace(/\/$/, "");
-
-  if (!url) {
-    throw new Error(missingApiMessage);
-  }
-
-  return url;
 }
 
 function getBrasilApiCepBaseUrl() {
