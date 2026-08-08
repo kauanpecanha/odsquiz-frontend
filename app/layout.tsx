@@ -37,6 +37,9 @@ const sfProText = localFont({
 export const metadata: Metadata = {
   title: "ODS Quiz",
   description: "Developed by Serra Hackclub, remastered by Kauan Peçanha",
+  icons: {
+    icon: "/odsquiz-logo.png",
+  },
 };
 
 const themeScript = `
