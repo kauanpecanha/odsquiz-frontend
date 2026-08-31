@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import sdgCircle from "../public/sdg-circle.png";
 import bannerWordmark from "../public/odsquiz-logo-words-only.png";
 
@@ -33,9 +34,12 @@ export function Banner() {
             progride nos ODS.
           </p>
 
-          <button className="mt-[var(--size-banner-button-margin-top)] min-h-11 w-full rounded-[var(--size-banner-button-radius)] border border-[var(--color-app-foreground)] px-[var(--size-banner-button-padding-x)] py-[var(--size-banner-button-padding-y)] text-[length:var(--size-banner-button-text)] font-bold text-[var(--color-app-foreground)] transition hover:bg-[var(--color-app-foreground)] hover:text-[var(--color-button-hover-text)] sm:w-auto">
+          <Link
+            href="/quiz"
+            className="mt-[var(--size-banner-button-margin-top)] inline-flex min-h-11 w-full items-center justify-center rounded-[var(--size-banner-button-radius)] border border-[var(--color-app-foreground)] px-[var(--size-banner-button-padding-x)] py-[var(--size-banner-button-padding-y)] text-[length:var(--size-banner-button-text)] font-bold text-[var(--color-app-foreground)] transition hover:bg-[var(--color-app-foreground)] hover:text-[var(--color-button-hover-text)] sm:w-auto"
+          >
             Responder agora
-          </button>
+          </Link>
         </div>
       </div>
     </section>
