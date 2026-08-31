@@ -21,6 +21,12 @@ RUN --mount=type=cache,target=/root/.npm \
 ### Stage 2: Build Next.js application
 FROM node:${NODE_VERSION} AS builder
 WORKDIR /app
+ARG AUTH_API_URL=http://localhost:8080
+ARG INITIATIVES_API_URL=http://localhost:8081
+ARG QUIZ_API_URL=http://localhost:8082
+ENV AUTH_API_URL=${AUTH_API_URL}
+ENV INITIATIVES_API_URL=${INITIATIVES_API_URL}
+ENV QUIZ_API_URL=${QUIZ_API_URL}
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NODE_ENV=production
@@ -38,9 +44,15 @@ RUN --mount=type=cache,target=/app/.next/cache \
 ### Stage 3: Runtime - copy .next and install production deps
 FROM node:${NODE_VERSION} AS runner
 WORKDIR /app
+ARG AUTH_API_URL=http://localhost:8080
+ARG INITIATIVES_API_URL=http://localhost:8081
+ARG QUIZ_API_URL=http://localhost:8082
 ENV NODE_ENV=production
 ENV PORT=3000
 ENV HOSTNAME=0.0.0.0
+ENV AUTH_API_URL=${AUTH_API_URL}
+ENV INITIATIVES_API_URL=${INITIATIVES_API_URL}
+ENV QUIZ_API_URL=${QUIZ_API_URL}
 
 # Copy built files and public assets
 COPY --from=builder /app/.next ./.next
